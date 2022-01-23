@@ -33,6 +33,17 @@ In order to generate features and discover corelations between common words and 
 ![alt text](https://github.com/seanmcgeehan/Toxic-Sentiment-analysis/blob/main/download.png?raw=true)
 
 
+
+
+
+
+
+
+In bulding our classifers, we used five different modeling packages. Our most successful models include logistic regression on tf-idf and our fine-tuned roBERTa and BERT models, which is a bit of surprise considering that the former is a much simpler model. All performed similarly (with an AUC around 0.84 - 0.86), which serves as a lesson to not discount simple models. However, we believe that the BERT has more potential.
+
+In the future, given more GPU resources, we hope to be able to fine-tune BERT with the full dataset. Additional avenues to explore in the future include analysis based on stemming to catch offensive words that share the same root, ensemble models, higher data fidelity, better data labeling, more feature engineering heuristics. Utilizing other pretrained models may also be a fruitful pursuit. The sentence structure such as separating the subject and predicate could provide useful context clues when predicting toxicity. Performing Named Entity Recognition could also add more signal to the model’s weights.
+
+
 **Stack** -
 Python
 Pandas
@@ -43,5 +54,8 @@ NLTK
 Seaborn
 Spacy
 BERT
+
+
+
 
 
